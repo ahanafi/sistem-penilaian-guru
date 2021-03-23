@@ -1,0 +1,87 @@
+Options Indexes FollowSymLinks
+
+ErrorDocument 404 /skp-system/admin/404.php
+
+RewriteEngine On
+RewriteRule ^login$ login.php
+RewriteRule ^logout$ logout.php
+
+RewriteRule ^dashboard$ index.php
+RewriteRule ^download-template/(.*)$ download-template.php?filename=$1
+
+#GURU
+RewriteRule ^data-guru$ index.php?page=data-guru [L]
+RewriteRule ^data-guru/create$ index.php?page=data-guru&action=create [L]
+RewriteRule ^data-guru/import$ index.php?page=data-guru&action=import [L]
+RewriteRule ^data-guru/export$ index.php?page=data-guru&action=export [L]
+RewriteRule ^data-guru/edit/([0-9]+)$ index.php?page=data-guru&action=edit&id=$1 [L]
+RewriteRule ^data-guru/tambah-kelas/([0-9]+)$ index.php?page=data-guru&action=tambah-kelas&id=$1 [L]
+RewriteRule ^data-guru/delete-kelas/([0-9]+)$ index.php?page=data-guru&action=delete-kelas&id=$1 [L]
+RewriteRule ^data-guru/delete/([0-9]+)$ index.php?page=data-guru&action=delete&id=$1 [L]
+
+#SISWA
+RewriteRule ^data-siswa$ index.php?page=data-siswa [L]
+RewriteRule ^data-siswa/create$ index.php?page=data-siswa&action=create [L]
+RewriteRule ^data-siswa/import$ index.php?page=data-siswa&action=import [L]
+RewriteRule ^data-siswa/export$ index.php?page=data-siswa&action=export [L]
+RewriteRule ^data-siswa/edit/([0-9]+)$ index.php?page=data-siswa&action=edit&id=$1 [L]
+RewriteRule ^data-siswa/delete/([0-9]+)$ index.php?page=data-siswa&action=delete&id=$1 [L]
+
+#KELAS
+RewriteRule ^data-kelas$ index.php?page=data-kelas [L]
+RewriteRule ^data-kelas/create$ index.php?page=data-kelas&action=create [L]
+RewriteRule ^data-kelas/import$ index.php?page=data-kelas&action=import [L]
+RewriteRule ^data-kelas/export$ index.php?page=data-kelas&action=export [L]
+RewriteRule ^data-kelas/edit/([0-9]+)$ index.php?page=data-kelas&action=edit&id=$1 [L]
+RewriteRule ^data-kelas/delete/([0-9]+)$ index.php?page=data-kelas&action=delete&id=$1
+RewriteRule ^data-kelas/detail/([0-9]+)$ index.php?page=data-kelas&action=detail&id=$1
+RewriteRule ^data-kelas/tambah-pengajar/([0-9]+)$ index.php?page=data-kelas&action=tambah-pengajar&id=$1
+RewriteRule ^data-kelas/hapus-pengajar/([0-9]+)$ index.php?page=data-kelas&action=hapus-pengajar&id=$1
+RewriteRule ^data-kelas/set-mapel/([0-9]+)$ index.php?page=data-kelas&action=set-mapel&id=$1
+RewriteRule ^data-kelas/set-mapel-global$ index.php?page=data-kelas&action=set-mapel-global
+
+#KELAS
+RewriteRule ^mata-pelajaran$ index.php?page=mata-pelajaran [L]
+RewriteRule ^mata-pelajaran/create$ index.php?page=mata-pelajaran&action=create [L]
+RewriteRule ^mata-pelajaran/import$ index.php?page=mata-pelajaran&action=import [L]
+RewriteRule ^mata-pelajaran/export$ index.php?page=mata-pelajaran&action=export [L]
+RewriteRule ^mata-pelajaran/edit/([0-9]+)$ index.php?page=mata-pelajaran&action=edit&id=$1 [L]
+RewriteRule ^mata-pelajaran/delete/([0-9]+)$ index.php?page=mata-pelajaran&action=delete&id=$1
+RewriteRule ^mata-pelajaran/detail/([0-9]+)$ index.php?page=mata-pelajaran&action=detail&id=$1
+RewriteRule ^mata-pelajaran/tambah-pengajar/([0-9]+)$ index.php?page=mata-pelajaran&action=tambah-pengajar&id=$1
+RewriteRule ^mata-pelajaran/hapus-pengajar/([0-9]+)$ index.php?page=mata-pelajaran&action=hapus-pengajar&id=$1
+
+#ASPEK-PENILAIAN
+RewriteRule ^aspek-penilaian$ index.php?page=aspek-penilaian [L]
+RewriteRule ^aspek-penilaian/create$ index.php?page=aspek-penilaian&action=create [L]
+RewriteRule ^aspek-penilaian/import$ index.php?page=aspek-penilaian&action=import [L]
+RewriteRule ^aspek-penilaian/export$ index.php?page=aspek-penilaian&action=export [L]
+RewriteRule ^aspek-penilaian/edit/([0-9]+)$ index.php?page=aspek-penilaian&action=edit&id=$1 [L]
+RewriteRule ^aspek-penilaian/delete/([0-9]+)$ index.php?page=aspek-penilaian&action=delete&id=$1
+
+#HASIL
+RewriteRule ^hasil-penilaian$ index.php?page=hasil-penilaian [L]
+RewriteRule ^responden$ index.php?page=responden [L]
+RewriteRule ^responden/real/(.*)$ index.php?page=responden&action=real&kode-siswa=$1 [L]
+RewriteRule ^responden/delete/(.*)$ index.php?page=responden&action=delete&kode-siswa=$1 [L]
+RewriteRule ^responden/detail/(.*)$ index.php?page=responden&action=detail&kode-siswa=$1 [L]
+
+#NOT-RESPONDING
+RewriteRule ^responden/not-responding$ index.php?page=responden&action=not-responding [L]
+RewriteRule ^responden/not-responding/kelas/(.*)$ index.php?page=responden&action=not-responding&kelas=$1 [L]
+RewriteRule ^responden/not-responding/jenjang/(.*)$ index.php?page=responden&action=not-responding&jenjang=$1 [L]
+
+RewriteRule ^detail-penilaian$ index.php?page=detail-penilaian [L]
+RewriteRule ^detail-penilaian/(.*)$ index.php?page=detail-penilaian&kode-guru=$1 [L]
+RewriteRule ^detail-penilaian-guru/export/(.*)$ export-detail-guru.php?kode-guru=$1 [L]
+
+#USER
+RewriteRule ^user-management$ index.php?page=user-management [L]
+RewriteRule ^user-management/create$ index.php?page=user-management&action=create [L]
+RewriteRule ^user-management/edit/([0-9]+)$ index.php?page=user-management&action=edit&id=$1 [L]
+RewriteRule ^user-management/delete/([0-9]+)$ index.php?page=data-guru&action=delete&id=$1 [L]
+RewriteRule ^profil/ubah-password$ index.php?page=profil&action=ubah-password [L]
+
+RewriteRule ^detail-penilaian/export$ export-rekap.php [L]
+RewriteRule ^hasil-penilaian/export$ export.php [L]
+RewriteRule ^grafik$ index.php?page=grafik [L]

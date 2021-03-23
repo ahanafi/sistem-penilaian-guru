@@ -1,0 +1,13 @@
+Options Indexes FollowSymLinks
+
+ErrorDocument 404 /skp-system/404.php
+ErrorDocument 403 /skp-system/404.php
+ErrorDocument 500 /skp-system/404.php
+
+RewriteEngine On
+RewriteRule ^welcome$ index.php
+RewriteRule ^landing$ index.php?page=landing
+RewriteRule ^thank-you$ index.php?page=last
+RewriteRule ^polling/section/(.*)$ index.php?page=polling&action=vote&id=$1
+RewriteRule ^logout$ end-session.php
+RewriteRule ^get-kelas/(.*)$ get-kelas.php?kompetensi=$1
