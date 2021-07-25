@@ -1,7 +1,5 @@
 # Aplikasi Penilaian Guru oleh Siswa
 
-## Table of Contents
-
 ## Installation Instruction
 
 1. [Download](https://github.com/ahanafi/sistem-penilaian-guru/archive/refs/heads/master.zip) or clone this repository to your Computer.
