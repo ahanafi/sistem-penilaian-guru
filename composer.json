@@ -1,15 +1,16 @@
 {
-    "name": "ahanafi/skp-system",
-    "authors": [
-        {
-            "name": "Ahmad Hanafi",
-            "email": "Contaminated007@gmail.com"
-        }
-    ],
-    "require": {
-        "dompdf/dompdf": "^0.8.3",
-        "phpoffice/phpspreadsheet": "^1.9",
-        "phelium/recaptcha": "^1.0",
-        "vlucas/phpdotenv": "^3.6"
+  "name": "ahanafi/skp-system",
+  "authors": [
+    {
+      "name": "Ahmad Hanafi",
+      "email": "Contaminated007@gmail.com"
     }
+  ],
+  "require": {
+    "dompdf/dompdf": "0.8.6",
+    "phpoffice/phpspreadsheet": "^1.18",
+    "phelium/recaptcha": "^1.0.8",
+    "vlucas/phpdotenv": "^3.6.8",
+    "ext-mysqli": "*"
+  }
 }
